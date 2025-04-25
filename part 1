@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Chapter 13 Multiple Choice Quiz</title>
+  <title>Test 3 Part 1 Multiple Choice Quiz</title>
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; }
     .question { margin-bottom: 20px; }
@@ -13,150 +13,60 @@
   </style>
 </head>
 <body>
-  <h2>Chapter 13 Multiple Choice Quiz – Part 1</h2>
+  <h2>Test 3 – Part 1</h2>
   <div id="quizContainer"></div>
   <button id="submitBtn">Submit</button>
 
   <script>
-   const quizData = [
+const quizData = [
   {
-    "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
-    "correct": "Regressive taxes place a higher burden on lower-income individuals as a percentage of income.",
+    "question": "Which of the following best relates to the topic of 'Role of County Governments'?",
+    "correct": "They are assessed based on the market value of property each year.",
     "answers": [
-      "The comptroller also audits expenditures and provides economic forecasts.",
-      "Regressive taxes place a higher burden on lower-income individuals as a percentage of income.",
-      "Health and Human Services is second, dominated by Medicaid and CHIP.",
-      "Strong mayor-council cities have an independently elected mayor with executive powers.",
+      "They are assessed based on the market value of property each year.",
+      "The commissioners court governs each county and passes local policies.",
+      "Each commissioner represents a precinct within the county.",
+      "Texas passes a budget every two years during odd-year legislative sessions.",
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Role of Local School Boards'?",
+    "correct": "COGs do not have taxing authority or binding legislative powers.",
+    "answers": [
+      "COGs do not have taxing authority or binding legislative powers.",
+      "In council-manager systems, the mayor is often a ceremonial role or part of the council.",
+      "They represent community interests in the education system.",
+      "Progressive tax structures aim to reduce income inequality.",
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Ad Valorem Taxes'?",
+    "correct": "Tax rates are set by local taxing authorities like school boards or city councils.",
+    "answers": [
+      "Tax rates are set by local taxing authorities like school boards or city councils.",
+      "Transportation spending includes highways, TxDOT, and public infrastructure.",
+      "Home rule allows more autonomy in local policy, taxation, and government structure.",
+      "The commissioners court governs each county and passes local policies.",
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Ad Valorem Taxes'?",
+    "correct": "Counties operate jails and provide indigent healthcare.",
+    "answers": [
+      "Counties operate jails and provide indigent healthcare.",
+      "Ad valorem means 'according to value'-typically property taxes.",
+      "They are repaid over time, typically through taxes or user fees.",
+      "Texas has 24 regional COGs covering all counties.",
     ]
   },
   {
     "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
-    "correct": "Sales taxes are typically regressive because everyone pays the same rate regardless of income.",
+    "correct": "Texas passes a budget every two years during odd-year legislative sessions.",
     "answers": [
       "Texas passes a budget every two years during odd-year legislative sessions.",
       "Sales taxes are typically regressive because everyone pays the same rate regardless of income.",
       "COGs are voluntary associations of local governments for regional cooperation.",
       "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
-    "correct": "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
-    "answers": [
-      "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
-      "It is harder to respond to mid-cycle crises due to infrequent sessions.",
-      "General obligation bonds require voter approval and are backed by taxes.",
-      "Council-manager cities hire a professional manager to execute policies set by the elected council.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
-    "correct": "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
-    "answers": [
-      "School boards set policy and direction for independent school districts (ISDs).",
-      "School boards can call for bond elections to fund new schools or improvements.",
-      "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
-      "Examples of progressive taxes include federal income taxes and some redistributive policies.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
-    "correct": "Texas relies more on regressive taxes like sales and fuel taxes due to its no-income-tax policy.",
-    "answers": [
-      "Council-manager governments are seen as more businesslike and efficient.",
-      "Texas relies more on regressive taxes like sales and fuel taxes due to its no-income-tax policy.",
-      "School boards set policy and direction for independent school districts (ISDs).",
-      "Health and Human Services is second, dominated by Medicaid and CHIP.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
-    "correct": "Progressive tax structures aim to reduce income inequality.",
-    "answers": [
-      "Progressive tax structures aim to reduce income inequality.",
-      "COGs do not have taxing authority or binding legislative powers.",
-      "COGs are voluntary associations of local governments for regional cooperation.",
-      "Texas passes a budget every two years during odd-year legislative sessions.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'General Law and Home Rule Cities'?",
-    "correct": "General law cities operate under laws provided by the Texas Legislature.",
-    "answers": [
-      "Strong mayor systems are common in larger cities where visibility and leadership are key.",
-      "Public safety and criminal justice receive significant funding, especially prisons.",
-      "Examples of progressive taxes include federal income taxes and some redistributive policies.",
-      "General law cities operate under laws provided by the Texas Legislature.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'General Law and Home Rule Cities'?",
-    "correct": "These cities are limited in power to what state law expressly allows.",
-    "answers": [
-      "COGs are voluntary associations of local governments for regional cooperation.",
-      "These cities are limited in power to what state law expressly allows.",
-      "Counties operate jails and provide indigent healthcare.",
-      "Council-manager governments are seen as more businesslike and efficient.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'General Law and Home Rule Cities'?",
-    "correct": "Home rule cities (population > 5,000) can adopt charters to govern themselves.",
-    "answers": [
-      "Home rule cities (population > 5,000) can adopt charters to govern themselves.",
-      "The legislature cannot exceed the comptroller's revenue estimate.",
-      "Tax rates are set by local taxing authorities like school boards or city councils.",
-      "Counties are the administrative arm of state government at the local level.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'General Law and Home Rule Cities'?",
-    "correct": "Home rule allows more autonomy in local policy, taxation, and government structure.",
-    "answers": [
-      "Texas relies more on regressive taxes like sales and fuel taxes due to its no-income-tax policy.",
-      "Progressive tax structures aim to reduce income inequality.",
-      "The comptroller also audits expenditures and provides economic forecasts.",
-      "Home rule allows more autonomy in local policy, taxation, and government structure.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'General Law and Home Rule Cities'?",
-    "correct": "Home rule cities can annex land and set term limits with fewer state restrictions.",
-    "answers": [
-      "Home rule cities can annex land and set term limits with fewer state restrictions.",
-      "General law cities often have a standard mayor-council government.",
-      "COGs do not have taxing authority or binding legislative powers.",
-      "The state has no personal income tax, relying on sales and property taxes.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'General Law and Home Rule Cities'?",
-    "correct": "Home rule cities can annex land and set term limits with fewer state restrictions.",
-    "answers": [
-      "Each commissioner represents a precinct within the county.",
-      "The strong mayor oversees departments, prepares the budget, and can veto council actions.",
-      "Home rule cities can annex land and set term limits with fewer state restrictions.",
-      "Fiscal conservatism is a core political value in Texas.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Major Areas of State Spending'?",
-    "correct": "Education is the largest area, with spending on public schools and higher education.",
-    "answers": [
-      "Tax increases are politically unpopular, shaping budget decisions.",
-      "Education is the largest area, with spending on public schools and higher education.",
-      "Council-manager governments are seen as more businesslike and efficient.",
-      "Counties are the administrative arm of state government at the local level.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Major Areas of State Spending'?",
-    "correct": "Health and Human Services is second, dominated by Medicaid and CHIP.",
-    "answers": [
-      "Each commissioner represents a precinct within the county.",
-      "Their estimate limits how much the legislature can spend.",
-      "General law cities often have a standard mayor-council government.",
-      "Health and Human Services is second, dominated by Medicaid and CHIP.",
     ]
   },
   {
@@ -170,98 +80,18 @@
     ]
   },
   {
-    "question": "Which of the following best relates to the topic of 'Major Areas of State Spending'?",
-    "correct": "Public safety and criminal justice receive significant funding, especially prisons.",
+    "question": "Which of the following best relates to the topic of 'Role of County Governments'?",
+    "correct": "General law cities often have a standard mayor-council government.",
     "answers": [
-      "These cities are limited in power to what state law expressly allows.",
-      "Ad valorem means 'according to value'-typically property taxes.",
-      "They collect state taxes and manage state accounts.",
-      "Public safety and criminal justice receive significant funding, especially prisons.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Major Areas of State Spending'?",
-    "correct": "General government includes the operation of state agencies and executive offices.",
-    "answers": [
-      "General government includes the operation of state agencies and executive offices.",
-      "Tax rates are set by local taxing authorities like school boards or city councils.",
-      "They collect state taxes and manage state accounts.",
-      "Federal mandates and dedicated funds restrict budget flexibility.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Major Areas of State Spending'?",
-    "correct": "Business and economic development, including workforce training, also receive funding.",
-    "answers": [
-      "The court operates as both a legislative and executive local body.",
-      "Boards are composed of elected members serving staggered terms.",
-      "Business and economic development, including workforce training, also receive funding.",
-      "They adopt budgets, hire superintendents, and oversee curriculum standards.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Major Areas of State Spending'?",
-    "correct": "Environmental and natural resources programs make up a smaller share.",
-    "answers": [
-      "It is harder to respond to mid-cycle crises due to infrequent sessions.",
-      "Environmental and natural resources programs make up a smaller share.",
-      "In council-manager systems, the mayor is often a ceremonial role or part of the council.",
-      "They establish local policies within the framework of state and federal law.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Biennial Budgets'?",
-    "correct": "Texas passes a budget every two years during odd-year legislative sessions.",
-    "answers": [
-      "Texas passes a budget every two years during odd-year legislative sessions.",
-      "They establish local policies within the framework of state and federal law.",
-      "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
-      "Home rule cities (population > 5,000) can adopt charters to govern themselves.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Biennial Budgets'?",
-    "correct": "Biennial budgeting contributes to conservative fiscal practices.",
-    "answers": [
-      "Balanced budget requirements limit deficit spending.",
-      "This system requires forecasting revenue 30 months in advance.",
-      "Biennial budgeting contributes to conservative fiscal practices.",
-      "Public safety and criminal justice receive significant funding, especially prisons.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Biennial Budgets'?",
-    "correct": "The legislature cannot exceed the comptroller's revenue estimate.",
-    "answers": [
-      "The office plays a crucial gatekeeping role in Texas finance.",
-      "General government includes the operation of state agencies and executive offices.",
-      "The legislature cannot exceed the comptroller's revenue estimate.",
-      "Supplemental budgets are sometimes passed if revenue exceeds projections.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Biennial Budgets'?",
-    "correct": "It is harder to respond to mid-cycle crises due to infrequent sessions.",
-    "answers": [
+      "General law cities often have a standard mayor-council government.",
+      "They maintain property records and conduct criminal and civil courts.",
       "School boards can call for bond elections to fund new schools or improvements.",
-      "It is harder to respond to mid-cycle crises due to infrequent sessions.",
-      "These cities are limited in power to what state law expressly allows.",
-      "A conservative estimate can effectively constrain legislative ambitions.",
+      "Texas relies heavily on ad valorem taxes due to no state income tax.",
     ]
   },
   {
     "question": "Which of the following best relates to the topic of 'Biennial Budgets'?",
-    "correct": "Biennial budgeting contributes to conservative fiscal practices.",
-    "answers": [
-      "Biennial budgeting contributes to conservative fiscal practices.",
-      "Council-manager cities hire a professional manager to execute policies set by the elected council.",
-      "Environmental and natural resources programs make up a smaller share.",
-      "Ad valorem means 'according to value'-typically property taxes.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Biennial Budgets'?",
-    "correct": "Supplemental budgets are sometimes passed if revenue exceeds projections.",
+    "correct": "Texas relies heavily on ad valorem taxes due to no state income tax.",
     "answers": [
       "Texas relies heavily on ad valorem taxes due to no state income tax.",
       "COGs do not have taxing authority or binding legislative powers.",
@@ -270,83 +100,23 @@
     ]
   },
   {
-    "question": "Which of the following best relates to the topic of 'Purpose and Uses of Municipal Bonds'?",
-    "correct": "Municipal bonds fund public projects like schools, roads, and utilities.",
+    "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
+    "correct": "The comptroller also audits expenditures and provides economic forecasts.",
     "answers": [
-      "They are assessed based on the market value of property each year.",
-      "Municipal bonds fund public projects like schools, roads, and utilities.",
-      "They are repaid over time, typically through taxes or user fees.",
-      "Strong mayor systems are common in larger cities where visibility and leadership are key.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Purpose and Uses of Municipal Bonds'?",
-    "correct": "They are repaid over time, typically through taxes or user fees.",
-    "answers": [
-      "They are repaid over time, typically through taxes or user fees.",
-      "Home rule cities (population > 5,000) can adopt charters to govern themselves.",
-      "Supplemental budgets are sometimes passed if revenue exceeds projections.",
-      "General government includes the operation of state agencies and executive offices.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Purpose and Uses of Municipal Bonds'?",
-    "correct": "General obligation bonds require voter approval and are backed by taxes.",
-    "answers": [
-      "General obligation bonds require voter approval and are backed by taxes.",
-      "They are repaid over time, typically through taxes or user fees.",
-      "The office plays a crucial gatekeeping role in Texas finance.",
-      "Council-manager governments are seen as more businesslike and efficient.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Purpose and Uses of Municipal Bonds'?",
-    "correct": "Revenue bonds are repaid from specific income sources, like toll roads.",
-    "answers": [
-      "Council-manager cities hire a professional manager to execute policies set by the elected council.",
-      "General law cities operate under laws provided by the Texas Legislature.",
-      "Progressive tax structures aim to reduce income inequality.",
-      "Revenue bonds are repaid from specific income sources, like toll roads.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Purpose and Uses of Municipal Bonds'?",
-    "correct": "They allow cities to make long-term investments without immediate tax hikes.",
-    "answers": [
-      "Texas has 24 regional COGs covering all counties.",
-      "They are repaid over time, typically through taxes or user fees.",
-      "They allow cities to make long-term investments without immediate tax hikes.",
-      "They collect state taxes and manage state accounts.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Purpose and Uses of Municipal Bonds'?",
-    "correct": "Municipal bonds often receive favorable tax treatment for investors.",
-    "answers": [
-      "The county judge presides over the commissioners court and represents the county.",
-      "The commissioners court governs each county and passes local policies.",
-      "Council-manager governments are seen as more businesslike and efficient.",
-      "Municipal bonds often receive favorable tax treatment for investors.",
-    ]
-  },
-  {
-    "question": "Which of the following best relates to the topic of 'Role of County Governments'?",
-    "correct": "Counties manage local roads, public safety, and elections.",
-    "answers": [
-      "This system requires forecasting revenue 30 months in advance.",
-      "Revenue bonds are repaid from specific income sources, like toll roads.",
-      "Counties manage local roads, public safety, and elections.",
+      "The comptroller also audits expenditures and provides economic forecasts.",
+      "Regressive taxes place a higher burden on lower-income individuals as a percentage of income.",
       "Health and Human Services is second, dominated by Medicaid and CHIP.",
+      "Strong mayor-council cities have an independently elected mayor with executive powers.",
     ]
   },
   {
-    "question": "Which of the following best relates to the topic of 'Role of County Governments'?",
-    "correct": "They maintain property records and conduct criminal and civil courts.",
+    "question": "Which of the following best relates to the topic of 'General Law and Home Rule Cities'?",
+    "correct": "Home rule cities (population > 5,000) can adopt charters to govern themselves.",
     "answers": [
-      "General law cities often have a standard mayor-council government.",
-      "They maintain property records and conduct criminal and civil courts.",
-      "School boards can call for bond elections to fund new schools or improvements.",
-      "Texas relies heavily on ad valorem taxes due to no state income tax.",
+      "Home rule cities (population > 5,000) can adopt charters to govern themselves.",
+      "The legislature cannot exceed the comptroller's revenue estimate.",
+      "Tax rates are set by local taxing authorities like school boards or city councils.",
+      "Counties are the administrative arm of state government at the local level.",
     ]
   },
   {
@@ -359,8 +129,57 @@
       "The comptroller estimates and certifies revenue before budgets are passed.",
     ]
   },
-];
-    function shuffle(array) {
+  {
+    "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
+    "correct": "Progressive tax structures aim to reduce income inequality.",
+    "answers": [
+      "Progressive tax structures aim to reduce income inequality.",
+      "COGs do not have taxing authority or binding legislative powers.",
+      "COGs are voluntary associations of local governments for regional cooperation.",
+      "Texas passes a budget every two years during odd-year legislative sessions.",
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Regressive and Progressive Taxes'?",
+    "correct": "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
+    "answers": [
+      "Progressive taxes increase in rate as income increases, placing a larger burden on the wealthy.",
+      "It is harder to respond to mid-cycle crises due to infrequent sessions.",
+      "General obligation bonds require voter approval and are backed by taxes.",
+      "Council-manager cities hire a professional manager to execute policies set by the elected council.",
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'State Fiscal Policy'?",
+    "correct": "Fiscal conservatism is a core political value in Texas.",
+    "answers": [
+      "Fiscal conservatism is a core political value in Texas.",
+      "They establish local policies within the framework of state and federal law.",
+      "Municipal bonds often receive favorable tax treatment for investors.",
+      "Education is the largest area, with spending on public schools and higher education.",
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Role of Local School Boards'?",
+    "correct": "School boards can call for bond elections to fund new schools or improvements.",
+    "answers": [
+      "School boards can call for bond elections to fund new schools or improvements.",
+      "Balanced budget requirements limit deficit spending.",
+      "They do not have home rule; their powers are defined by the state.",
+      "Texas fiscal policy emphasizes low taxes and limited government.",
+    ]
+  },
+  {
+    "question": "Which of the following best relates to the topic of 'Role of the Comptroller'?",
+    "correct": "Texas passes a budget every two years during odd-year legislative sessions.",
+    "answers": [
+      "Texas passes a budget every two years during odd-year legislative sessions.",
+      "Sales taxes are typically regressive because everyone pays the same rate regardless of income.",
+      "The office plays a crucial gatekeeping role in Texas finance.",
+      "They help coordinate transportation, emergency planning, and economic development.",
+    ]
+  },
+];    function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
